@@ -59,6 +59,11 @@ body {
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+  :root {
+    --font-geist-sans: 'Inter', sans-serif;
+    --font-geist-mono: 'Roboto Mono', monospace;
+  }
+  
   .dark {
     --background: 20 14.3% 4.1%;
     --foreground: 60 9.1% 97.8%;
