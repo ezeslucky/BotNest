@@ -3,19 +3,16 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+ 
 const font = DM_Sans({
   
   subsets: ["latin"],
 });
 
-// const geistMono = Roboto_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
+
 
 export const metadata: Metadata = {
-  title: "Fuzie",
+  title: "BuildoMatic",
   description: "Automatic Your Work With Fuzie",
 };
 
@@ -31,7 +28,7 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark" // Ensure server-rendered default matches client
+          defaultTheme="dark" 
           enableSystem
           disableTransitionOnChange
         >
