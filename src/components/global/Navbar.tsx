@@ -1,44 +1,82 @@
-/* eslint-disable @typescript-eslint/no-empty-object-type */
-
-import { MenuIcon } from 'lucide-react'
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
-import { ThemeToggle } from './ThemeToggle'
+"use client";
 
 
-type Props = {}
+import Link from "next/link";
+import {  buttonVariants } from "../ui/button";
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export const Navbar = async (props: Props) => {
+
+import { SheetClose } from "@/components/ui/sheet";
+import { Icons } from "./icon";
+import Anchor from "./anchor";
+import { ThemeToggle } from "./ThemeToggle";
+import { MenuIcon } from "lucide-react";
+
+
+
+export const NAVLINKS = [
+  {
+    title: "Docs",
+    href: "/docs",
+  },
+
+  {
+    title: "Components",
+    href: "/docs",
+  },
+
+  {
+    title: "Examples",
+    href: "/examples",
+  },
+  {
+    title: "Colors",
+    href: "/colors",
+  },
+];
+
+export function Navbar() {
   return (
-    <header className=' fixed right-0 left-0 top-0 py-4 px-4  backdrop-blur-lg z-[100] flex items-center border-b-[1px]   justify-between'>
-<aside className=' flex items-center gap-[2px]'>
-<p className=' text-3xl font-bold'>Build</p>
+    <nav className="w-full border-b h-16 sticky top-0 z-50 lg:px-4 px-2 backdrop-filter backdrop-blur-xl bg-opacity-5">
+      <div className="sm:p-3 p-2 max-w-[1530px] mx-auto h-full flex items-center justify-between gap-2">
+        <div className="flex items-center gap-5">
+          {/* <SheetLeftbar /> */}
+          <div className="flex items-center gap-8">
+            <div className="sm:flex ">
+              <Logo />
+            </div>
+            <div className="lg:flex hidden items-center gap-5 text-sm font-medium text-muted-foreground">
+              <NavMenu />
+            </div>
+          </div>
+        </div>
 
-       <Image
-       src='/logo.svg'
-       width={30}
-       height={30}
-       alt='logo'
-       className=''
-       />
-            <p className=' text-3xl font-bold'>matic</p>
-        </aside>
-        <nav className=' absolute left-[50%] top-[50%] transform translate-x-[-50%] translate-y-[-50%] hidden md:block'>
-   <ul className=' flex items-center gap-4 list-none '>
-    <li> <Link href="#">Products </Link></li>
-    <li> <Link href="#">Pricing </Link></li>
-    <li> <Link href="#">Clients </Link></li>
-    <li> <Link href="#">Resources </Link></li>
-    <li> <Link href="#">Documentation </Link></li>
-    <li> <Link href="#">Enterprise </Link></li>
-   
-   
-   </ul> 
-        </nav>
-        <aside className=' flex items-center gap-4'>
-          <ThemeToggle/>
+        <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2">
+              <div className='hidden md:flex'>
+                {/* <Search /> */}
+              </div>
+              <div>
+              <Link
+                href="https://github.com/ezeslucky/BotNest.git"
+                className={buttonVariants({ variant: "ghost", size: "icon" })}
+              >
+                <Icons.gitHub className="icon-class w-4" />
+              </Link>
+              <Link
+                href="https://x.com/ezeslucky"
+                className={buttonVariants({
+                  variant: "ghost",
+                  size: "icon",
+                })}
+              >
+                <Icons.twitter className="icon-class w-3" />
+              </Link>
+              <ThemeToggle />
+              </div>
+
+              <aside className=' flex items-center gap-4'>
+          
             <Link 
             href="/dashboard"
             className='  relative inline-flex h-10 overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-offset-2 focus:ring-offset-slate-50'>
@@ -53,6 +91,49 @@ export const Navbar = async (props: Props) => {
             }
             <MenuIcon className='md:hidden' />
         </aside>
-    </header>
-  )
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+}
+
+export function Logo() {
+  return (
+    <Link href="/" className="flex items-center gap-2">
+      {/* <Icons.logo className="icon-class w-2" /> */}
+
+      <h2 className="text-base md:text-lg font-bold">
+       BotNest
+      </h2>
+      
+    </Link>
+  );
+}
+
+export function NavMenu({ isSheet = false }) {
+  return (
+    <>
+      {NAVLINKS.map((item) => {
+        const Comp = (
+          <Anchor
+            key={item.title + item.href}
+            activeClassName="text-black dark:text-white font-semibold"
+            absolute
+            href={item.href}
+          >
+            {item.title}
+          </Anchor>
+        );
+        return isSheet ? (
+          <SheetClose key={item.title + item.href} asChild>
+            {Comp}
+          </SheetClose>
+        ) : (
+          Comp
+        );
+      })}
+    </>
+  );
 }
