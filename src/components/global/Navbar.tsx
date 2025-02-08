@@ -102,7 +102,7 @@ export function Navbar() {
 export function Logo() {
   return (
     <Link href="/" className="flex items-center gap-2">
-      {/* <Icons.logo className="icon-class w-2" /> */}
+      <Icons.logo className="icon-class w-2" />
 
       <h2 className="text-base md:text-lg font-bold">
        BotNest

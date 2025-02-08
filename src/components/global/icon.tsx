@@ -3,37 +3,39 @@ type IconProps = React.HTMLAttributes<SVGElement>;
 
 export const Icons = {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  // logo: (props: IconProps) => (
-  //   <svg
-  //     width="25"
-  //     height="25"
-  //     viewBox="0 0 32 32"
-  //     fill="white"
-  //     xmlns="http://www.w3.org/2000/svg"
-  //   >
-  //     <rect width="32" height="32" rx="6"  />
-  //     <g opacity="0.8">
-  //       <rect x="8" y="10" width="2" height="12" fill="black" />
-  //       <rect x="12" y="8" width="2" height="16"  fill="black" />
-  //       <rect x="16" y="6" width="2" height="20" fill="black" />
-  //       <rect x="20" y="8" width="2" height="16" fill="black" />
-  //       <rect x="24" y="10" width="2" height="12" fill="black"/>
-  //     </g>
-  //     <defs>
-  //       <linearGradient
-  //         id="gradient"
-  //         x1="0"
-  //         y1="0"
-  //         x2="32"
-  //         y2="32"
-  //         gradientUnits="userSpaceOnUse"
-  //       >
-  //         <stop stopColor="hsl(var(--primary))" />
-  //         <stop offset="1" stopColor="hsl(var(--primary) / 0.8)" />
-  //       </linearGradient>
-  //     </defs>
-  //   </svg>
-  // ),
+  logo: (props: IconProps) => (
+ 
+    <svg
+    width="25"
+    height="25"
+    viewBox="0 0 32 32"
+    fill="white"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect width="32" height="32" rx="8" fill="url(#gradient)" />
+    <g opacity="0.9">
+      <rect x="7" y="9" width="2.5" height="14" fill="black" rx="1" />
+      <rect x="11.5" y="7" width="2.5" height="18" fill="black" rx="1" />
+      <rect x="16" y="5" width="2.5" height="22" fill="black" rx="1" />
+      <rect x="20.5" y="7" width="2.5" height="18" fill="black" rx="1" />
+      <rect x="25" y="9" width="2.5" height="14" fill="black" rx="1" />
+    </g>
+    <defs>
+      <linearGradient
+        id="gradient"
+        x1="0"
+        y1="0"
+        x2="32"
+        y2="32"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#4F46E5" />
+        <stop offset="1" stopColor="#6366F1" />
+      </linearGradient>
+    </defs>
+  </svg>
+  
+  ),
   twitter: (props: IconProps) => (
     <svg
       {...props}

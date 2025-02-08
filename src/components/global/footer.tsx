@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { Icons } from "./icon";
 
 // import { Icons } from "./icon";
 
@@ -11,7 +12,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between">
           <div className="mb-8 md:mb-0">
             <Link href="/" className="flex items-center gap-2">
-              {/* <Icons.logo className="icon-class w-2" /> */}
+              <Icons.logo className="icon-class w-2" />
               <h2 className="text-lg font-bold">BotNest</h2>
             </Link>
 
