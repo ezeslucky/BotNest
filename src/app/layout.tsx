@@ -12,8 +12,8 @@ const font = DM_Sans({
 
 
 export const metadata: Metadata = {
-  title: "BuildoMatic",
-  description: "Automatic Your Work With Fuzie",
+  title: "BotNest",
+  description: "Automatic Your Work With BotNest",
 };
 
 export default function RootLayout({

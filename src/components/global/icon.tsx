@@ -29,8 +29,8 @@ export const Icons = {
         y2="32"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stopColor="#4F46E5" />
-        <stop offset="1" stopColor="#6366F1" />
+        <stop stopColor="#bdc3c7" />
+        <stop offset="1" stopColor="#bdc3c7" />
       </linearGradient>
     </defs>
   </svg>
