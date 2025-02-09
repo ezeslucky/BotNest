@@ -29,7 +29,7 @@ export default function Home() {
                   </span>
                 </Button>
                 <h1 className="text-5xl md:text-8xl  bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-600 font-sans font-bold">
-                  Automate Your Work With Fuzzie
+                  Automate Your Work With BotNest
                 </h1>
               </div>
             }
@@ -102,7 +102,7 @@ export default function Home() {
                 className="text-xl font-bold text-neutral-600 dark:text-white "
               >
                 Pro Plan
-                <h2 className="text-6xl ">$29</h2>
+                <h2 className="text-6xl ">$2</h2>
               </CardItem>
               <CardItem
                 translateZ="60"
@@ -149,7 +149,7 @@ export default function Home() {
                 className="text-xl font-bold text-neutral-600 dark:text-white "
               >
                 Unlimited
-                <h2 className="text-6xl ">$99</h2>
+                <h2 className="text-6xl ">$10</h2>
               </CardItem>
               <CardItem
                 translateZ="60"
