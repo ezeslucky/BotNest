@@ -17,8 +17,8 @@ export function LampComponent() {
         }}
         className="mt-20 bg-gradient-to-br from-neutral-300 to-neutral-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
       >
-        The Right Plan, 
-        <br /> Every Time
+        Plans That
+        <br /> Fit You Best
       </motion.h1>
     </LampContainer>
   )

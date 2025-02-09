@@ -10,7 +10,7 @@ export interface Option {
   [key: string]: string | boolean | undefined
 }
 
-type BotNestStore = {
+type FuzzieStore = {
   googleFile: any
   setGoogleFile: (googleFile: any) => void
   slackChannels: Option[]
@@ -19,7 +19,7 @@ type BotNestStore = {
   setSelectedSlackChannels: (selectedSlackChannels: Option[]) => void
 }
 
-export const useBotNestStore = create<BotNestStore>()((set) => ({
+export const useFuzzieStore = create<FuzzieStore>()((set) => ({
   googleFile: {},
   setGoogleFile: (googleFile: any) => set({ googleFile }),
   slackChannels: [],

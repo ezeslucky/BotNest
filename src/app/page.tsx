@@ -1,7 +1,6 @@
 import { CardBody, CardContainer, CardItem } from '@/components/global/3d-card'
 import { HeroParallax } from '@/components/global/connect-parallax'
 import { ContainerScroll } from '@/components/global/container-scroll-animation'
-import Footer from '@/components/global/footer'
 import { InfiniteMovingCards } from '@/components/global/infinite-moving-cards'
 import { LampComponent } from '@/components/global/lamp'
 import Navbar from '@/components/global/navbar'
@@ -30,7 +29,7 @@ export default function Home() {
                   </span>
                 </Button>
                 <h1 className="text-5xl md:text-8xl  bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-600 font-sans font-bold">
-                Simplify Tasks, Automate  BotNest
+                  Automate Your Work With Fuzzie
                 </h1>
               </div>
             }
@@ -191,9 +190,6 @@ export default function Home() {
             </CardBody>
           </CardContainer>
         </div>
-      </section>
-      <section>
-        <Footer/>
       </section>
     </main>
   )

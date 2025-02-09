@@ -1,6 +1,6 @@
 import { ConnectionProviderProps } from '@/providers/connections-provider'
 import { EditorState } from '@/providers/editor-provider'
-import { useBotNestStore } from '@/store'
+import { useFuzzieStore } from '@/store'
 import React from 'react'
 import ContentBasedOnTitle from './content-based-on-title'
 
@@ -15,7 +15,7 @@ const RenderOutputAccordion = ({ state, nodeConnection }: Props) => {
     setGoogleFile,
     selectedSlackChannels,
     setSelectedSlackChannels,
-  } = useBotNestStore()
+  } = useFuzzieStore()
   return (
     <ContentBasedOnTitle
       nodeConnection={nodeConnection}
