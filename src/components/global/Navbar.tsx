@@ -3,6 +3,9 @@ import Link from 'next/link'
 import React from 'react'
 import { MenuIcon } from 'lucide-react'
 import { UserButton, currentUser } from '@clerk/nextjs'
+import { Icons } from './icon'
+import { ModeToggle } from './mode-toggle'
+import { buttonVariants } from '../ui/button'
 
 type Props = {}
 
@@ -43,6 +46,24 @@ const Navbar = async (props: Props) => {
           </li>
         </ul>
       </nav>
+      <div className='flex items-center gap-3'>
+              <Link
+                href="https://github.com/ezeslucky/BotNest.git"
+                className={buttonVariants({ variant: "ghost", size: "icon" })}
+              >
+                <Icons.gitHub className="icon-class w-4" />
+              </Link>
+              <Link
+                href="https://x.com/ezeslucky"
+                className={buttonVariants({
+                  variant: "ghost",
+                  size: "icon",
+                })}
+              >
+                <Icons.twitter className="icon-class w-3" />
+              </Link>
+              <ModeToggle />
+              </div>
       <aside className="flex items-center gap-4">
         <Link
           href="/dashboard"
