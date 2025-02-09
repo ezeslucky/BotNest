@@ -10,7 +10,7 @@ import { BillingProvider } from '@/providers/billing-provider'
 const font = DM_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'BotNest .',
+  title: 'BotNest',
   description: 'Automate Your Work With BotNest .',
 }
 
