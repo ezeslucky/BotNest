@@ -27,7 +27,7 @@ import {
 } from '@/components/ui/accordion'
 import RenderConnectionAccordion from './render-connection-accordion'
 import RenderOutputAccordion from './render-output-accordian'
-import { useFuzzieStore } from '@/store'
+import { useBotNest Store } from '@/store'
 
 type Props = {
   nodes: EditorNodeType[]
@@ -36,7 +36,7 @@ type Props = {
 const EditorCanvasSidebar = ({ nodes }: Props) => {
   const { state } = useEditor()
   const { nodeConnection } = useNodeConnections()
-  const { googleFile, setSlackChannels } = useFuzzieStore()
+  const { googleFile, setSlackChannels } = useBotNest Store()
   useEffect(() => {
     if (state) {
       onConnections(nodeConnection, state, googleFile)

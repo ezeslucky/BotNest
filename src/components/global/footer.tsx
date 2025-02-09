@@ -4,6 +4,7 @@ import Link from "next/link";
 
 import { Button } from "../ui/button";
 import { Icons } from "./icon";
+import Image from "next/image";
 
 
 export default function Footer() {
@@ -13,7 +14,14 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between">
           <div className="mb-8 md:mb-0">
             <Link href="/" className="flex items-center gap-2">
-              <Icons.logo className="icon-class w-2" />
+              {/* <Icons.logo className="icon-class w-2" /> */}
+              <Image
+                        src="/logo.svg"
+                        width={42}
+                        height={42}
+                        alt="BotNest "
+                        className="icon-class "
+                      />
               <h2 className="text-lg font-bold">BotNest</h2>
             </Link>
 
@@ -23,14 +31,7 @@ export default function Footer() {
                 <Link href="https://x.com/ezeslucky">@ezeslucky</Link>
               </span>
             </h1>
-            <div className="mt-2">
-            <Link  href="https://x.com/ezeslucky">
-              <Button variant='secondary'>
-                Share Your Thoughts On
-                <Icons.twitter className="icon-class ml-1 w-3.5 " />
-              </Button>
-            </Link>
-            </div>
+            
             <p className="text-sm dark:text-gray-400 mt-5">
               © {new Date().getFullYear()} BotNest. All rights reserved.
             </p>
@@ -57,7 +58,7 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            <div>
+            {/* <div>
               <h3 className="font-semibold mb-4">Legal</h3>
               <ul className="space-y-2">
                 <li>
@@ -72,7 +73,7 @@ export default function Footer() {
                 </li>
               
               </ul>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className=" w-full flex mt-4 items-center justify-center   ">

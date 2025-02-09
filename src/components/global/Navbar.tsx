@@ -17,8 +17,8 @@ const Navbar = async (props: Props) => {
         {/* <p className="text-3xl font-bold">Fu</p> */}
         <Image
           src="/logo.svg"
-          width={30}
-          height={30}
+          width={50}
+          height={50}
           alt="BotNest "
           className="shadow-sm"
         />
