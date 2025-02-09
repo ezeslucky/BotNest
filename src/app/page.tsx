@@ -1,6 +1,7 @@
 import { CardBody, CardContainer, CardItem } from '@/components/global/3d-card'
 import { HeroParallax } from '@/components/global/connect-parallax'
 import { ContainerScroll } from '@/components/global/container-scroll-animation'
+import Footer from '@/components/global/footer'
 import { InfiniteMovingCards } from '@/components/global/infinite-moving-cards'
 import { LampComponent } from '@/components/global/lamp'
 import Navbar from '@/components/global/navbar'
@@ -190,6 +191,9 @@ export default function Home() {
             </CardBody>
           </CardContainer>
         </div>
+      </section>
+      <section>
+        <Footer/>
       </section>
     </main>
   )
